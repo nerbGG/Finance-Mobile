@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="arrow.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nav-bar">
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="expense.html"><strong>Expenses</strong></a>
+            <a href="">About</a>
+            <a href="">Learn More</a>
+        </ul>
+    </div>
+    <div class="main">
+        <div id="header-div">
+            <button id="nav-btn" onclick="move()"><i class="arrow right"></i></button>
+            <p>SF, Simple Finances</p>
+        </div>
+        <div id="xpns"></div>
+        <button id="add-btn"class="exp-btn" onclick="createInput()">&#10011</button> 
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

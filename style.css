@@ -1,0 +1,221 @@
+
+:root {
+    --color1:#210070;
+    --color2:#efc9af;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html, body{
+    font-family: 'Bebas Neue', serif;
+    letter-spacing: 3px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    /* height:667px; */
+    overflow: hidden;
+    /* background-color: #210070; */
+}
+div{
+    /* border: 2px solid black; */
+    height: 100%;
+}
+ul{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 5%;
+}
+strong{
+    font-size: larger;
+}
+a{
+    text-decoration: none;
+    /* font-weight: bolder; */
+    margin-top:25%;
+    /* color:var(--color2); */
+    color:white;
+    visibility: visible;/*even if the parent container has a visibilty set to hidden, seeting the visibility for a child element will override hidden for that child element*/
+}
+button{
+    outline: 0;
+}
+#main-one{
+    height:100%;
+}
+a:hover, a:active{
+    text-decoration: underline;
+}
+#nav-bar{
+    background-color: var(--color1);
+    width:50%;
+    position: absolute;
+    left: -50%; 
+    transition: transform .5s ease-in-out;
+    /* z-index:998;  for some reason z index makes animations slow*/
+    /* background-color: black; */
+}
+.move-nav{
+    /*  width:100%; */
+    /* transform: translateY(-105%);  */
+    transform: translateX(96%);     
+} 
+#nav-btn{
+    margin-left: 15px;
+    /* margin-top: 10px; */
+    /* margin-right: 10%; */
+    width:30px;
+    background-color:var(--color1);
+    border: none;
+    height: 25px;
+    transition: transform .5s ease-in-out;
+}
+.move-main{
+    /*  width:100%; */
+    /* transform: translateY(-105%);  */
+    transform: translateX(48%);     
+    /* background-color: black; */
+    /* transition: transform .5s ease-in-out; */
+    background-color: rgb(247, 240, 240);
+}
+.main{
+    width: 375px;
+    text-align: center;
+    transition: transform .5s ease-in-out;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color:var(--color2) ;
+}
+#header-div{
+    /* display: table-cell;
+    vertical-align:bottom;
+    min-height: 10em; */
+    vertical-align: text-bottom;
+    /* color:#213970 ; */
+    /* border-bottom: 2px solid black; */
+    background-color: var(--color1); 
+    /* #213970 */
+    height: 50px;
+    text-align:center;
+    /* color: var(--color2); */
+    color:white;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /*justify-content: center;    
+    align-items: center; */
+}
+#header-div>p{
+    margin-left: 18%;
+    /* text-shadow: 1px 1px 2px #ccc; */
+}
+.main>button{
+    width:50px;
+    height:30px;
+}
+#xpns{
+    /* border: 2px solid black; */
+    height: 500px;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#xpns>div{
+    width: 100%;
+    height: 40px;
+    display:grid;
+    grid-template-columns: 2fr 1fr .5fr; /*when we are displaying the expenses, the template becomes .5fr 2fr 1 fr .5fr (index.js (readanddisplay 130)*/
+    background-color: var(--color2);
+    /*grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    /* overflow:scroll; */
+}
+input{
+    height:36px;
+    width: 99.8%;
+} 
+#xpns button{
+    height:36px;
+    background-color: none;
+}
+#xpns:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* #xpns p{
+    text-align: center;
+    border-left: 2px solid black;
+} */
+.main>button{
+    border-radius: 50%;
+    height: 50px;
+    width:50px;
+    background: white;
+    color:black;
+    /* margin-left:50%;
+    /* margin-top:12%; */
+    border-color: var(--color1);
+    box-shadow:  1px 1px 1px var(--color1);
+    transition: background-color .25s linear;
+}
+#inpt-btn{
+    margin-top:75%;
+}
+#input-div{
+    letter-spacing: 1px;
+    margin-top: 125px;
+    z-index: 999;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    /* border: 2px solid black; */
+    background: white;
+    margin-left:5%;
+    width: 90%;
+    height:200px;
+
+    /* border: 2px solid var(--color1); */
+    border: 2px solid grey;
+    padding:3%;
+    /* height: 300px; */
+    /* transition: visibility 10s ease-in-out; */
+}
+#input-div>span{
+    margin-top:10px;
+}
+#input-div button{
+    width: 60px;
+    height:30px;
+    justify-self: center;
+    margin-top:20%;
+}
+#cancel{
+    /* background-color: var(--color2); */
+}
+#submit{
+    background-color: var(--color1);
+    color: white;
+    /* border: 0px; */
+}
+#add-btn{
+    margin-left:0;
+    margin-top: 15px;
+}
+.no-see{
+    visibility: hidden;
+    display:none;
+}
+.no-vis{
+    visibility:unset
+}
+/* .main button:hover{
+    background:gray;
+    color:black
+} */

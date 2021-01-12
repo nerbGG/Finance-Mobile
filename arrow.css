@@ -1,0 +1,39 @@
+:root {
+  --color1:#210070;
+  --color2:#efc9af;
+}
+.arrow {
+    /* margin-left: 15px; */
+    border: solid white;
+    /* border:solid var(--color2); */
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    height:13px;
+    width: 13px;
+    transition: transform .5s ease-in-out;
+    visibility: visible; /*even if the parent container has a visibilty set to hidden, seeting the visibility for a child element will override hidden for that child element*/
+    /* margin-top: 20px; */
+  }
+  
+  .right {
+    transition: transform .5s ease-in-out;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transition: transform .5s ease-in-out;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
