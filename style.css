@@ -82,7 +82,7 @@ a:hover, a:active{
     background-color: rgb(247, 240, 240);
 }
 .main{
-    width: 375px;
+    width: 100%px;
     text-align: center;
     transition: transform .5s ease-in-out;
     overflow-y: scroll;
