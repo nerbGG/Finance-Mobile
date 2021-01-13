@@ -76,7 +76,7 @@ a:hover, a:active{
 .move-main{
     /*  width:100%; */
     /* transform: translateY(-105%);  */
-    transform: translateX(48%);     
+    transform: translateX(45%);     
     /* background-color: black; */
     /* transition: transform .5s ease-in-out; */
     background-color: rgb(247, 240, 240);
@@ -170,14 +170,13 @@ input{
 }
 #input-div{
     letter-spacing: 1px;
-    margin-top: 125px;
     z-index: 999;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 20px;
     /* border: 2px solid black; */
     background: white;
-    margin-left:5%;
+    margin: 125px auto;
     width: 90%;
     height:200px;
 

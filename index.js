@@ -109,9 +109,9 @@ function readandDisplay(expense){//converts the inputs into outputsand the butto
         var div = document.createElement("DIV");
         
         var d = document.createElement("BUTTON");
-        d.style.borderTop="none";
-        d.style.borderBottom="none";
-        d.style.borderLeft="none";
+        // d.style.borderTop="none";
+        // d.style.borderBottom="none";
+        // d.style.borderLeft="none";
         var p1 = document.createElement("BUTTON");
         // p1.style.borderTop="none";
         // p1.style.borderBottom="none";
