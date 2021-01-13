@@ -161,6 +161,7 @@ function onSubmit(){
     if(!(p1.value===" ")&&p2.value > 0){
         setExpName(p1.value);
         setExpPrice(p2.value);
+        setDate();
         addToList(expense);
         alert("successfully Added!");// a green checkmark should animate and faded out instead
     }
