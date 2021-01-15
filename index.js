@@ -147,7 +147,7 @@ function readandDisplay(expense){//converts the inputs into outputsand the butto
             // console.log(children);
             let i =0;
             for(i;i<expenseList.length;i++){//it is a linear search, implement a binary search in future
-                if(children[i]===div){
+                if(children[i]===div){//find the div that the delete buttons corresponds to
                     console.log(i);
                     expenseList.splice(i,1);
                     localStorage.setItem("list",JSON.stringify(expenseList));
