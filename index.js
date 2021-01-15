@@ -124,8 +124,8 @@ function readandDisplay(expense){//converts the inputs into outputsand the butto
        
         var btn =  document.createElement("BUTTON");
         btn.innerHTML = "Delete"; 
-        btn.id = expenseList.length - 1; //push always adds at the end so the id can be the size of the button can be the size of expense list array -1 {will be the index of the item to be removed}
-        
+        // btn.id = expenseList.length - 1; //push always adds at the end so the id can be the size of the button can be the size of expense list array -1 {will be the index of the item to be removed}
+    
         d.innerHTML = expense.date;
         // console.log(expense.date);
         p1.innerHTML = expense.descrip;
@@ -134,18 +134,28 @@ function readandDisplay(expense){//converts the inputs into outputsand the butto
         div.appendChild(d);
         div.appendChild(p1);
         div.appendChild(p2);
-        div.appendChild(btn);
+        div.appendChild(btn);//Object.assign({},exp)
 
         div.style.gridTemplateColumns = ".3fr 1fr 1fr .5fr";
         xpns.appendChild(div);
+        // console.log(xpns);
+       
         btn.addEventListener("click",function(){//delete button
-            xpns.removeChild(div); //save the div name and price into variables and search throught the array to remove the one that matches those
-            // console.log(btn.id);
-            expenseList.splice(btn.id,1);
-            localStorage.setItem("list",JSON.stringify(expenseList));
-            // let delete_btns = 
-            removeAllChildren(xpns);
-            displayEach();
+            // xpns.removeChild(btn.parentElement);//works but want to modify and ont change it directly
+            let div = btn.parentElement;
+            let children = xpns.children;
+            // console.log(children);
+            let i =0;
+            for(i;i<expenseList.length;i++){//it is a linear search, implement a binary search in future
+                if(children[i]===div){
+                    console.log(i);
+                    expenseList.splice(i,1);
+                    localStorage.setItem("list",JSON.stringify(expenseList));
+                    removeAllChildren(xpns);
+                    displayEach();
+                }
+            }
+           
         });
     }catch(e){
         console.log("trying to output expenses while in main:cant find the xpns div lol");
